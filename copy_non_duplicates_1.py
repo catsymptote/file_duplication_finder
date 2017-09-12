@@ -1,0 +1,2 @@
+from lib import file_duplication_finder
+file_duplication_finder.copy_non_duplicates_from_1()

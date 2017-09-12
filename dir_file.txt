@@ -1,0 +1,12 @@
+E:\\__Paul\\Picture & Video\\Camera\\Pictures\\Annet\\obj_tmp_1
+E:\\__Paul\\Picture & Video\\Camera\\Pictures\\Annet\\obj_tmp_2
+D:\\Projects\\Python\\file_duplication_finder\\_output
+
+
+#	The first 4 lines in this file is are directories:
+#		1. main_dir_1		- First directory to find files for comparison.
+#		2. main_dir_2		- Second directory to find files for comparison.
+#		3. output_root_dir	- First (and currently only) output "root" folder.
+#		4. unused			- Might be used for something, I guess.
+#	DO NOT change the first lines without being sure what you are doing. 
+#	This is a test file though :P
