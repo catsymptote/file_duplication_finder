@@ -26,7 +26,7 @@ def get_all_file_dirs(directory):
 
 
 def get_all_folder_dirs(directory):
-    directory
+    #directory
     file_list = []
     # Loops taken from: https://stackoverflow.com/questions/2909975/python-list-directory-subdirectory-and-files
     for path, subdirs, files in os.walk(directory):
