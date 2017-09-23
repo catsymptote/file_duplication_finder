@@ -1,5 +1,5 @@
-E:\\__Paul\\Picture & Video\\Camera\\Pictures\\Annet\\obj_tmp_1
-E:\\__Paul\\Picture & Video\\Camera\\Pictures\\Annet\\obj_tmp_2
+D:\Projects\Python\image_color_finder\_input
+D:\Projects\Python\image_color_finder\_output
 D:\\Projects\\Python\\file_duplication_finder\\_output
 
 
@@ -10,3 +10,6 @@ D:\\Projects\\Python\\file_duplication_finder\\_output
 #		4. unused			- Might be used for something, I guess.
 #	DO NOT change the first lines without being sure what you are doing. 
 #	This is a test file though :P
+# E:\\__Paul\\Picture & Video\\Camera\\Pictures\\Annet\\obj_tmp_1
+# E:\\__Paul\\Picture & Video\\Camera\\Pictures\\Annet\\obj_tmp_2
+# D:\\Projects\\Python\\file_duplication_finder\\_output
