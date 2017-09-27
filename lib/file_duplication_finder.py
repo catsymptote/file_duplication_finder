@@ -63,17 +63,11 @@ def get_directories_from_file():
     with open (dir_file) as f:
         dir_file_lines = f.readlines()
     dir_file_lines = [x.strip() for x in dir_file_lines]
-    #print (dir_file_lines)
-    #print (main_dir_1)
-    #print (main_dir_2)
-    #print (output_root_dir)
+    
     make_dir_list_safe(dir_file_lines)
     main_dir_1 = dir_file_lines[0]
     main_dir_2 = dir_file_lines[1]
     output_root_dir = dir_file_lines[2]
-    #print (main_dir_1)
-    #print (main_dir_2)
-    #print (output_root_dir)
 
 
 def get_dirs():
@@ -81,6 +75,7 @@ def get_dirs():
 
 
 def edit_dir_file(path, line):
+    # This seems complicated. If the dir_file is to be kept, it should probably be restructured to a simpler design.
     pass
 
 
@@ -138,7 +133,6 @@ def return_unique_values(a):
     seen = set()
     #uniq = [x for x in a if x not in seen and not seen.add(x)]
     return [x for x in a if x not in seen and not seen.add(x)]
-
 
 
 

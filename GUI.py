@@ -22,39 +22,43 @@ from lib import file_duplication_finder
 ###################
 
 def get_directory():
-    current_directory = filedialog.askdirectory()
-    print (current_directory)
-    sys.stdout.flush()
+    current_directory = filedialog.askdirectory()   # Set the file directory
+    if (current_directory != ""):
+        print (current_directory)
+        sys.stdout.flush()
 
 
 def change_dir_in_1():
     global dir_in_1
     global dir_in_1_var
-    dir_in_1_var = filedialog.askdirectory()
-    dir_in_1.set(dir_in_1_var)
-    file_duplication_finder.set_main_dir_1(dir_in_1_var)
-    print("First input directory:\t" + str(dir_in_1_var))
-    sys.stdout.flush()
+    dir_in_1_var = filedialog.askdirectory()    # Set the file directory
+    if (dir_in_1_var != ""):
+        dir_in_1.set(dir_in_1_var)
+        file_duplication_finder.set_main_dir_1(dir_in_1_var)
+        print("First input directory:\t" + str(dir_in_1_var))
+        sys.stdout.flush()
 
 
 def change_dir_in_2():
     global dir_in_2
     global dir_in_2_var
-    dir_in_2_var = filedialog.askdirectory()
-    dir_in_2.set(dir_in_2_var)
-    file_duplication_finder.set_main_dir_2(dir_in_2_var)
-    print("Second input directory:\t" + str(dir_in_2_var))
-    sys.stdout.flush()
+    dir_in_2_var = filedialog.askdirectory()    # Set the file directory
+    if (dir_in_2_var != ""):
+        dir_in_2.set(dir_in_2_var)
+        file_duplication_finder.set_main_dir_2(dir_in_2_var)
+        print("Second input directory:\t" + str(dir_in_2_var))
+        sys.stdout.flush()
 
 
 def change_dir_out():
     global dir_out
     global dir_out_var
-    dir_out_var = filedialog.askdirectory()
-    dir_out.set(dir_out_var)
-    file_duplication_finder.set_main_dir_out(dir_out_var)
-    print("Output directory:\t" + str(dir_out_var))
-    sys.stdout.flush()
+    dir_out_var = filedialog.askdirectory() # Set the file directory
+    if (dir_out_var != ""):
+        dir_out.set(dir_out_var)
+        file_duplication_finder.set_main_dir_out(dir_out_var)
+        print("Output directory:\t" + str(dir_out_var))
+        sys.stdout.flush()
 
 
 
