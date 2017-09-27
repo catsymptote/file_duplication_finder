@@ -7,6 +7,7 @@
 
 import os
 import os.path
+
 from lib import file_manager
 from lib import file_hasher
 #import file_manager
@@ -15,7 +16,7 @@ from lib import file_hasher
 
 ######################
 ## Global variables ##
-#####################
+######################
 
 dir_file = "dir_file.txt"
 
@@ -39,6 +40,19 @@ def set_main_directories(main_dir_one, main_dir_two):
     global main_dir_2
     main_dir_1 = main_dir_one
     main_dir_2 = main_dir_two
+
+
+def set_main_dir_1(dir_in_1):
+    global main_dir_1
+    main_dir_1 = dir_in_1
+
+def set_main_dir_2(dir_in_2):
+    global main_dir_2
+    main_dir_2 = dir_in_2
+
+def set_main_dir_out(dir_out):
+    global output_root_dir
+    output_root_dir = dir_out
 
 
 def get_directories_from_file():
@@ -160,6 +174,7 @@ def copy_non_duplicates_from_1():
         old_path = file_manager.get_all_file_dirs(main_dir_1)[non_match_1[i]]
         new_path = non_match_dir_1 + "\\" + os.path.relpath(old_path, main_dir_1)
         file_manager.copy_file(old_path, new_path)
+    print("copy_non_duplicates_from_1()")
 
 
 def copy_non_duplicates_from_2():
@@ -173,6 +188,7 @@ def copy_non_duplicates_from_2():
         old_path = file_manager.get_all_file_dirs(main_dir_2)[non_match_2[i]]
         new_path = non_match_dir_2 + "\\" + os.path.relpath(old_path, main_dir_2)
         file_manager.copy_file(old_path, new_path)
+    print("copy_non_duplicates_from_2()")
 
 
 def copy_duplicates_from_1():
@@ -183,6 +199,7 @@ def copy_duplicates_from_1():
         old_path = file_manager.get_all_file_dirs(main_dir_1)[match_1[i]]
         new_path = match_dir_1 + "\\" + os.path.relpath(old_path, main_dir_1)
         file_manager.copy_file(old_path, new_path)
+    print("copy_duplicates_from_1()")
 
 
 def copy_duplicates_from_2():
@@ -193,6 +210,7 @@ def copy_duplicates_from_2():
         old_path = file_manager.get_all_file_dirs(main_dir_2)[match_2[i]]
         new_path = match_dir_2 + "\\" + os.path.relpath(old_path, main_dir_2)
         file_manager.copy_file(old_path, new_path)
+    print("copy_duplicates_from_2()")
 
 
 """

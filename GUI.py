@@ -1,7 +1,9 @@
-# Python GUI with Tkinter
-# Interaction with Checkboxes, entries ++
-# Catsymptote
+## Author: Catsymptote
 
+
+#############
+## Imports ##
+#############
 
 from tkinter import *
 from tkinter import filedialog
@@ -14,6 +16,11 @@ import os
 from lib import file_duplication_finder
 
 
+
+###################
+## GUI functions ##
+###################
+
 def get_directory():
     current_directory = filedialog.askdirectory()
     print (current_directory)
@@ -25,6 +32,7 @@ def change_dir_in_1():
     global dir_in_1_var
     dir_in_1_var = filedialog.askdirectory()
     dir_in_1.set(dir_in_1_var)
+    file_duplication_finder.set_main_dir_1(dir_in_1_var)
     print("First input directory:\t" + str(dir_in_1_var))
     sys.stdout.flush()
 
@@ -34,6 +42,7 @@ def change_dir_in_2():
     global dir_in_2_var
     dir_in_2_var = filedialog.askdirectory()
     dir_in_2.set(dir_in_2_var)
+    file_duplication_finder.set_main_dir_2(dir_in_2_var)
     print("Second input directory:\t" + str(dir_in_2_var))
     sys.stdout.flush()
 
@@ -43,20 +52,22 @@ def change_dir_out():
     global dir_out_var
     dir_out_var = filedialog.askdirectory()
     dir_out.set(dir_out_var)
+    file_duplication_finder.set_main_dir_out(dir_out_var)
     print("Output directory:\t" + str(dir_out_var))
     sys.stdout.flush()
 
 
+
+#########################
+## Window construction ##
+#########################
 
 # Start ----------
 root_window = Tk()  # Window constructor / blank window
 # Start ----------
 
 
-#dir_in_1 = "Input folder 1"
-#dir_in_2 = "Input folder 2"
-#dir_out = "Output folder"
-
+## Directory variable creation
 dir_in_1 = StringVar()
 dir_in_1_var = file_duplication_finder.get_dirs()[0]
 dir_in_2 = StringVar()
@@ -69,9 +80,8 @@ dir_in_2.set(dir_in_2_var)
 dir_out.set(dir_out_var)
 
 
-#file_duplication_finder.copy_non_duplicates_from_2
 
-
+## Buttons
 button_1 = Button(
     root_window,
     text="Matches from 1",
@@ -126,10 +136,7 @@ button_browse_in_2.grid(columnspan=1, row=2, column=0)
 button_browse_out.grid(columnspan=1, row=3, column=0)
 
 
-#label_in_1 = Label(root_window, text=dir_in_1)
-#label_in_2 = Label(root_window, text=dir_in_2)
-#label_out = Label(root_window, text=dir_out)
-
+## Labels
 label_in_1 = Label(root_window, textvariable=dir_in_1)
 label_in_2 = Label(root_window, textvariable=dir_in_2)
 label_out = Label(root_window, textvariable=dir_out)
