@@ -8,6 +8,7 @@
 import os
 import os.path
 from lib import file_manager
+from lib import file_hasher
 #import file_manager
 
 
@@ -59,6 +60,14 @@ def get_directories_from_file():
     #print (main_dir_1)
     #print (main_dir_2)
     #print (output_root_dir)
+
+
+def get_dirs():
+    return (main_dir_1, main_dir_2, output_root_dir)
+
+
+def edit_dir_file(path, line):
+    pass
 
 
 def make_dir_list_safe(dir_list):
