@@ -40,19 +40,26 @@ def set_main_directories(main_dir_one, main_dir_two):
     global main_dir_2
     main_dir_1 = main_dir_one
     main_dir_2 = main_dir_two
+    print(main_dir_2)
 
 
 def set_main_dir_1(dir_in_1):
     global main_dir_1
-    main_dir_1 = dir_in_1
+    print(main_dir_1)
 
 def set_main_dir_2(dir_in_2):
     global main_dir_2
     main_dir_2 = dir_in_2
+    print(main_dir_2)
 
 def set_main_dir_out(dir_out):
-    global output_root_dir
+    global output_root_dir, match_dir_1, match_dir_2, non_match_dir_1, non_match_dir_2
     output_root_dir = dir_out
+    match_dir_1 = output_root_dir + "\\match_dir_1"
+    match_dir_2 = output_root_dir + "\\match_dir_2"
+    non_match_dir_1 = output_root_dir + "\\non_match_dir_1"
+    non_match_dir_2 = output_root_dir + "\\non_match_dir_2"
+
 
 
 def get_directories_from_file():
@@ -181,6 +188,7 @@ def copy_non_duplicates_from_2():
     for i in range(len(non_match_2)):
         old_path = file_manager.get_all_file_dirs(main_dir_2)[non_match_2[i]]
         new_path = non_match_dir_2 + "\\" + os.path.relpath(old_path, main_dir_2)
+        print(new_path)
         file_manager.copy_file(old_path, new_path)
     print("copy_non_duplicates_from_2()")
 

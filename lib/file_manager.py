@@ -37,6 +37,14 @@ def get_all_folder_dirs(directory):
     return file_list
 
 
+def get_all_root_folder_dirs(directory):
+    dir_list = []
+    #dir_list = [f for f in sorted(os.listdir(directory))]
+    #Loop taken from: https://stackoverflow.com/questions/7781545/how-to-get-all-folder-only-in-a-given-path-in-python
+    dir_list = [d for d in os.listdir(directory) if os.path.isdir(os.path.join(directory, d))]
+    return dir_list
+
+
 def get_all_file_names(directory):
     directory
     file_list = []

@@ -59,6 +59,8 @@ def change_dir_out():
         file_duplication_finder.set_main_dir_out(dir_out_var)
         print("Output directory:\t" + str(dir_out_var))
         sys.stdout.flush()
+    else:
+        print("Error: Could not set output dir!")
 
 
 
