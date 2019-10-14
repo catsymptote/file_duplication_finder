@@ -23,7 +23,7 @@ Possibility for using hashes instead of file names may be included at a later st
 
 ## Old method (No GUI):
 1. Set the directories of the two folders (it is important which is which) in the "dir_file.txt".
-⋅⋅* Do not change the line numbering (read the info in the dir_file)
+	* Do not change the line numbering (read the info in the dir_file)
 
 2. Chose which of these 3 functions the program will do by running one of the Python scripts in the main dir.
 
