@@ -1,4 +1,4 @@
-Finding duplicate files
+# Finding duplicate files
 -----------------------
 catsymptote@gmail.com
 
@@ -14,7 +14,7 @@ Possibility for using hashes instead of file names may be included at a later st
 
 
 
-New method (GUI):
+## New method (GUI):
 1.
 Open the GUI.py file.
 
@@ -26,7 +26,7 @@ Click the relevant buttons to perform the different functionality.
 
 
 
-Old method (No GUI):
+## Old method (No GUI):
 1.
 Set the directories of the two folders (it is important which is which) in the "dir_file.txt".
 	Do not change the line numbering (read the info in the dir_file)
